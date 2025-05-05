@@ -1,6 +1,6 @@
 //lab3
 
-let students = ["ali", "Ahmed", "Sara", "Hassan", "Fatima",'Omar','Lana','Noor'];
+let students = ["ali", "Ahmed", "Sara", "Hassan", "Fatima", 'Omar', 'Lana', 'Noor'];
 
 let nameA = students.filter((name) => name.charAt(0) === "A" || name.charAt(0) === "a");
 
@@ -21,3 +21,35 @@ console.log(orderedNames);
 
 let OmarHere = students.some((name) => name === "Omar");
 console.log(OmarHere);
+
+let totalLetters = students.reduce((acc, name) => acc + name.length, 0);
+console.log(totalLetters);
+
+let evenNames = students.filter((name) => name.length % 2 === 0);
+console.log(evenNames);
+let reversedNames = students.map((name) => name.split("").reverse().join(""));
+console.log(reversedNames);
+
+let removedNames = students.filter((name) => !name.includes('o') && !name.includes('O'));
+console.log(removedNames);
+
+let studentsGpa = [
+    ["Ali", [90, 83, 72, 95]],
+    ["Ahmed", [85, 78, 92, 70]],
+    ["Sara", [88, 91, 95,90]],
+    ["Hassan", [80, 75, 70, 60]],
+    ["Fatima", [95, 98, 100,32]],
+    ["Omar", [70, 80, 85,40]],
+    ["Lana", [88, 70, 92,66]],
+    ["Noor", [75, 80, 85,87]]
+];
+
+let studentGpa= studentsGpa.map((student) => {
+    let name = student[0];
+    let gpa = student[1].reduce((acc, grade) => acc + grade, 0) / student[1].length;
+    return [name, gpa];
+});
+console.log(studentGpa);
+
+let student80 = studentGpa.filter((student) => student[1] >= 80);
+console.log(student80);
