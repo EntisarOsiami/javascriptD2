@@ -14,7 +14,7 @@ const heights = characters.map((character) => character[1]);
 console.log(heights);
 
 // Question2 - using reduce
-const totalHeight = characters.reduce((total, character) => total + character[1],0); // reduce((accumulator, currentValue) => condition, initialValue)
+const totalHeight = characters.reduce((total, character) => total + character[1],0); // reduce((accumulator, currentValue) => accumulator + currentValue, initialValue)
 console.log(totalHeight);
 
 // Question3 - using filter
@@ -32,7 +32,7 @@ console.log(sortedByHeight);
 
 //question5 - using every
 const MoreThan40 = characters.every((character) => character[3] > 40); // every((element)=> condition)
-
+console.log(MoreThan40); 
 console.log(characters.every((character) => character[1] < 200));
 
 //question6 - using some
