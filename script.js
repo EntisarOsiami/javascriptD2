@@ -40,3 +40,5 @@ console.log(characters.some((character) => character[4] == "blue")); // some((el
 
 const tallerThan210 = characters.some((character) => character[1] > 200);
 console.log(tallerThan210);
+
+
