@@ -31,12 +31,12 @@ const sortedByHeight = characters.sort((a, b) => a[1] - b[1]);
 console.log(sortedByHeight);
 
 //question5 - using every
-const MoreThan40 = characters.every((character) => character[3] > 40); // every((element)=> condition)
+const MoreThan40 = characters.every((character) => character[3] > 40); // every((element)=> condition). return true or false.
 console.log(MoreThan40); 
 console.log(characters.every((character) => character[1] < 200));
 
 //question6 - using some
-console.log(characters.some((character) => character[4] == "blue")); // some((element)=> condition)
+console.log(characters.some((character) => character[4] == "blue")); // some((element)=> condition). return true or false.
 
 const tallerThan210 = characters.some((character) => character[1] > 200);
 console.log(tallerThan210);
