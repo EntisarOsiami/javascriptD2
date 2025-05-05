@@ -23,15 +23,15 @@ let OmarHere = students.some((name) => name === "Omar");
 console.log(OmarHere);
 
 let totalLetters = students.reduce((acc, name) => acc + name.length, 0);
-console.log(totalLetters);
+console.log(`Total of letters: ${totalLetters}`);
 
 let evenNames = students.filter((name) => name.length % 2 === 0);
-console.log(evenNames);
+console.log(`Even names: ${evenNames}`);
 let reversedNames = students.map((name) => name.split("").reverse().join(""));
-console.log(reversedNames);
+console.log(`reversed Names: ${reversedNames}`);
 
 let removedNames = students.filter((name) => !name.includes('o') && !name.includes('O'));
-console.log(removedNames);
+console.log(`names without 'o' or 'O' : ${removedNames}`);
 
 let studentsGpa = [
     ["Ali", [90, 83, 72, 95]],
@@ -49,7 +49,7 @@ let studentGpa= studentsGpa.map((student) => {
     let gpa = student[1].reduce((acc, grade) => acc + grade, 0) / student[1].length;
     return [name, gpa];
 });
-console.log(studentGpa);
+console.log(`Student GPA: ${studentGpa}`);
 
 let student80 = studentGpa.filter((student) => student[1] >= 80);
-console.log(student80);
+console.log(`Students with over 80 GPA: ${student80}`);
