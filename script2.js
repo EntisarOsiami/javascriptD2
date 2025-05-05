@@ -1,6 +1,6 @@
 //lab3
 
-let students = ["ali", "Ahmed", "Sara", "Hassan", "Fatima"];
+let students = ["ali", "Ahmed", "Sara", "Hassan", "Fatima",'Omar','Lana','Noor'];
 
 let nameA = students.filter((name) => name.charAt(0) === "A" || name.charAt(0) === "a");
 
