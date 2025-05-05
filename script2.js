@@ -12,7 +12,7 @@ console.log(names4);
 let nameCapitalized = students.map((name) => name.toUpperCase());
 console.log(nameCapitalized);
 
-let letterR = students.find((name) => name.includes("r", "R"));
+let letterR = students.find((name) => name.includes("r") || name.includes("R")); // the method includes takes one element or string, not multiples.
 console.log(letterR);
 
 
